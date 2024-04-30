@@ -1,0 +1,13 @@
+
+4월 25, 2024 09:39:11.13 NEW SESSION
+4월 25, 2024 09:39:11.13 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+4월 25, 2024 09:40:21.780 [3860:2568:0425/094021.780:ERROR:device_event_log_impl.cc(195)] [09:40:21.780] Bluetooth: bluetooth_adapter_winrt.cc:1057 Getting Default Adapter failed.
+4월 25, 2024 11:08:31.240 [3860:2568:0425/110831.240:ERROR:device_event_log_impl.cc(195)] [11:08:31.239] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+4월 25, 2024 15:10:54.938 [3860:2568:0425/151054.938:ERROR:device_event_log_impl.cc(195)] [15:10:54.938] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+4월 25, 2024 15:39:46.105 [3860:2568:0425/153946.105:ERROR:device_event_log_impl.cc(195)] [15:39:46.105] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+4월 25, 2024 15:50:53.235 [3860:2568:0425/155053.235:ERROR:device_event_log_impl.cc(195)] [15:50:53.235] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+4월 25, 2024 17:03:52.817 [3860:2568:0425/170352.817:ERROR:device_event_log_impl.cc(195)] [17:03:52.817] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+4월 25, 2024 17:35:31.375 [3860:2568:0425/173531.375:ERROR:device_event_log_impl.cc(195)] [17:35:31.375] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+4월 25, 2024 17:50:41.250 [3860:2568:0425/175041.250:ERROR:device_event_log_impl.cc(195)] [17:50:41.250] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+4월 25, 2024 17:50:45.961 [3860:2568:0425/175045.961:ERROR:device_event_log_impl.cc(195)] [17:50:45.960] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+4월 25, 2024 17:55:10.233 [3860:2568:0425/175510.233:ERROR:device_event_log_impl.cc(195)] [17:55:10.233] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)

@@ -1,0 +1,12 @@
+package com.ezen.test.repository;
+
+import com.ezen.test.domain.FileVO;
+
+public interface fdao {
+
+	static int insertFile(FileVO fvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}
