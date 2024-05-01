@@ -8,10 +8,10 @@
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
-		<java-version>11</java-version>
-		<org.springframework-version>5.3.10</org.springframework-version>
+				<java-version>11</java-version>
+				<org.springframework-version>5.3.10</org.springframework-version>
 		<org.aspectj-version>1.6.10</org.aspectj-version>
-		<org.slf4j-version>2.0.7</org.slf4j-version>
+				<org.slf4j-version>2.0.7</org.slf4j-version>
 	</properties>
 	<dependencies>
 		<!-- Spring -->
@@ -33,17 +33,20 @@
 			<version>${org.springframework-version}</version>
 		</dependency>
 		
-<!-- spring-jdbc / spring-test 추가 -->
-<dependency>
-	<groupId>org.springframework</groupId>
-	<artifactId>spring-jdbc</artifactId>
-	<version>${org.springframework-version}</version>
-</dependency>
-<dependency>
-	<groupId>org.springframework</groupId>
-	<artifactId>spring-test</artifactId>
-	<version>${org.springframework-version}</version>
-</dependency>
+				<!-- Spring-jdbc / Spring-test 추가 -->
+				<dependency>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-jdbc</artifactId>
+					<version>${org.springframework-version}</version>
+				</dependency>		
+				<dependency>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-test</artifactId>
+					<version>${org.springframework-version}</version>
+				</dependency>		
+			
+		
+		
 				
 		<!-- AspectJ -->
 		<dependency>
@@ -71,26 +74,29 @@
 			<scope>runtime</scope>
 		</dependency>
 		
-<!-- logback-classic-1.4.5 / logback-core-1.4.5 / log4jdbc-log4j2-jdbc4.1-1.16 -->
-<!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
-<dependency>
-    <groupId>ch.qos.logback</groupId>
-    <artifactId>logback-classic</artifactId>
-    <version>1.4.5</version>
-    <!-- <scope>test</scope> -->
-</dependency>
-<!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-core -->
-<dependency>
-    <groupId>ch.qos.logback</groupId>
-    <artifactId>logback-core</artifactId>
-    <version>1.4.5</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.bgee.log4jdbc-log4j2/log4jdbc-log4j2-jdbc4.1 -->
-<dependency>
-    <groupId>org.bgee.log4jdbc-log4j2</groupId>
-    <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
-    <version>1.16</version>
-</dependency>
+				<!-- log4j 보안이슈로 주석처리 -->
+				<!-- logback-classic-1.4.5 / logback-core / log4jdbc-log4j2-jdbc4.1-1.16 -->
+				<!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
+				<dependency>
+				    <groupId>ch.qos.logback</groupId>
+				    <artifactId>logback-classic</artifactId>
+				    <version>1.4.5</version>
+				    <!-- <scope>test</scope> -->
+				</dependency>
+				<!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-core -->
+				<dependency>
+				    <groupId>ch.qos.logback</groupId>
+				    <artifactId>logback-core</artifactId>
+				    <version>1.4.5</version>
+				</dependency>
+				<!-- https://mvnrepository.com/artifact/org.bgee.log4jdbc-log4j2/log4jdbc-log4j2-jdbc4.1 -->
+				<dependency>
+				    <groupId>org.bgee.log4jdbc-log4j2</groupId>
+				    <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
+				    <version>1.16</version>
+				</dependency>
+
+		
 		
 		<!-- <dependency>
 			<groupId>log4j</groupId>
@@ -149,108 +155,126 @@
 			<artifactId>junit</artifactId>
 			<version>4.7</version>
 			<scope>test</scope>
-		</dependency>
+		</dependency>     
 		
-		<!-- 여기서부터 추가 디펜던시 삽입 -->
-		<!-- lombok -->
-		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-		<dependency>
-		    <groupId>org.projectlombok</groupId>
-		    <artifactId>lombok</artifactId>
-		    <version>1.18.32</version>
-		    <scope>provided</scope>
-		</dependency>
-		<!-- DB -->
-		<!-- mysql-connector-j-8.3.0 / mybatis-3.5.10 / mybatis-spring-2.0.6 -->
-		<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
-		<dependency>
-		    <groupId>com.mysql</groupId>
-		    <artifactId>mysql-connector-j</artifactId>
-		    <version>8.3.0</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
-		<dependency>
-		    <groupId>org.mybatis</groupId>
-		    <artifactId>mybatis</artifactId>
-		    <version>3.5.10</version>
-		</dependency>
+		
+				<!-- 추가 디펜던시 삽입 -->
+				
+				<!-- lombok -->
+				<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+				<dependency>
+				    <groupId>org.projectlombok</groupId>
+				    <artifactId>lombok</artifactId>
+				    <version>1.18.32</version>
+				    <scope>provided</scope>
+				</dependency>
+				
+				<!-- DB -->
+				<!-- mysql-connector-j-8.0.32 / mybatis-3.5.10 / mybatis-spring 2.0.6 -->   
+				<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+				<dependency>
+				    <groupId>com.mysql</groupId>
+				    <artifactId>mysql-connector-j</artifactId>
+				    <version>8.0.32</version>
+				</dependency>
+				<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+				<dependency>
+				    <groupId>org.mybatis</groupId>
+				    <artifactId>mybatis</artifactId>
+				    <version>3.5.10</version>
+				</dependency>
 				<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
-		<dependency>
-		    <groupId>org.mybatis</groupId>
-		    <artifactId>mybatis-spring</artifactId>
-		    <version>2.0.6</version>
-		</dependency>
-		<!-- spring-security-5.5.3 -->
-		<!-- core-5.5.3 / web-5.5.3 / config-5.5.3 -->
-		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-core -->
-		<dependency>
-		    <groupId>org.springframework.security</groupId>
-		    <artifactId>spring-security-core</artifactId>
-		    <version>5.5.3</version>
-		</dependency>
+				<dependency>
+				    <groupId>org.mybatis</groupId>
+				    <artifactId>mybatis-spring</artifactId>
+				    <version>2.0.6</version>
+				</dependency>
+		
+				<!-- HikariCP -->
+				<dependency>
+				   <groupId>com.zaxxer</groupId>
+				   <artifactId>HikariCP</artifactId>
+				   <version>5.1.0</version>
+				</dependency>
+		
+		
+				
+				<!-- spring-security- -->
+				<!-- core-5.5.3 / web-5.5.3 / config-5.5.3 -->
+				<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-core -->
+				<dependency>
+				    <groupId>org.springframework.security</groupId>
+				    <artifactId>spring-security-core</artifactId>
+				    <version>5.5.3</version>
+				</dependency>
 				<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
-		<dependency>
-		    <groupId>org.springframework.security</groupId>
-		    <artifactId>spring-security-web</artifactId>
-		    <version>5.5.3</version>
-		</dependency>
+				<dependency>
+				    <groupId>org.springframework.security</groupId>
+				    <artifactId>spring-security-web</artifactId>
+				    <version>5.5.3</version>
+				</dependency>
 				<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-config -->
-		<dependency>
-		    <groupId>org.springframework.security</groupId>
-		    <artifactId>spring-security-config</artifactId>
-		    <version>5.5.3</version>
-		</dependency>
+				<dependency>
+				    <groupId>org.springframework.security</groupId>
+				    <artifactId>spring-security-config</artifactId>
+				    <version>5.5.3</version>
+				</dependency>
 		
-		<!-- 댓글관련 : json -->
-		<!-- jackson-databind-2.13.0	jackson-dataformat-xml-2.13.0 -->
-		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
-		<dependency>
-		    <groupId>com.fasterxml.jackson.core</groupId>
-		    <artifactId>jackson-databind</artifactId>
-		    <version>2.13.0</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml -->
-		<dependency>
-		    <groupId>com.fasterxml.jackson.dataformat</groupId>
-		    <artifactId>jackson-dataformat-xml</artifactId>
-		    <version>2.13.0</version>
-		</dependency>
+				<!-- 댓글관련 : json -->
+				<!-- jackson-databine 2.13.0 / jackson-dataformat-xml 2.13.0 -->
+				<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+				<dependency>
+				    <groupId>com.fasterxml.jackson.core</groupId>
+				    <artifactId>jackson-databind</artifactId>
+				    <version>2.13.0</version>
+				</dependency>
+				
+				<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml -->
+				<dependency>
+				    <groupId>com.fasterxml.jackson.dataformat</groupId>
+				    <artifactId>jackson-dataformat-xml</artifactId>
+				    <version>2.13.0</version>
+				</dependency>
+				
+				<!-- file upload 관련 -->
+				<!-- commons-fileupload 1.4 / commons-io 2.11.0 / thumbnailator 0.4.14 / tika-core 2.4.1 / tika-parsers 2.4.1 -->
+				<!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
+				<dependency>
+				    <groupId>commons-fileupload</groupId>
+				    <artifactId>commons-fileupload</artifactId>
+				    <version>1.4</version>
+				</dependency>
+				<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+				<dependency>
+				    <groupId>commons-io</groupId>
+				    <artifactId>commons-io</artifactId>
+				    <version>2.11.0</version>
+				</dependency>
+				<!-- https://mvnrepository.com/artifact/net.coobird/thumbnailator -->
+				<dependency>
+				    <groupId>net.coobird</groupId>
+				    <artifactId>thumbnailator</artifactId>
+				    <version>0.4.14</version>
+				</dependency>
+				<!-- https://mvnrepository.com/artifact/org.apache.tika/tika-core -->
+				<dependency>
+				    <groupId>org.apache.tika</groupId>
+				    <artifactId>tika-core</artifactId>
+				    <version>2.4.1</version>
+				</dependency>
+				<!-- https://mvnrepository.com/artifact/org.apache.tika/tika-parsers -->
+				<dependency>
+				    <groupId>org.apache.tika</groupId>
+				    <artifactId>tika-parsers</artifactId>
+				    <version>2.4.1</version>
+				    <type>pom</type>
+				</dependency>
+				
 		
-		<!-- fileupload 관련 -->
-		<!-- commons-fileupload-1.4 / commons-io-2.11.0 / thumbnailator-0.4.14 -->
-		<!-- tika-core-2.4.1 / tika-parsers-2.4.1 -->
-		<!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
-		<dependency>
-		    <groupId>commons-fileupload</groupId>
-		    <artifactId>commons-fileupload</artifactId>
-		    <version>1.4</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
-		<dependency>
-		    <groupId>commons-io</groupId>
-		    <artifactId>commons-io</artifactId>
-		    <version>2.11.0</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/net.coobird/thumbnailator -->
-		<dependency>
-		    <groupId>net.coobird</groupId>
-		    <artifactId>thumbnailator</artifactId>
-		    <version>0.4.14</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.apache.tika/tika-core -->
-		<dependency>
-		    <groupId>org.apache.tika</groupId>
-		    <artifactId>tika-core</artifactId>
-		    <version>2.4.1</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.apache.tika/tika-parsers -->
-		<dependency>
-		    <groupId>org.apache.tika</groupId>
-		    <artifactId>tika-parsers</artifactId>
-		    <version>2.4.1</version>
-		    <type>pom</type>
-		</dependency>
 		
+		
+				       
+		        
 	</dependencies>
     <build>
         <plugins>
@@ -289,15 +313,21 @@
                 </configuration>
             </plugin>
             
-<!-- web.xml 삭제, javaConfig 설정을 하기 위한 추가 설정 -->
-<plugin>
-	<groupId>org.apache.maven.plugins</groupId>
-	<artifactId>maven-war-plugin</artifactId>
-	<version>3.2.0</version>
-	<configuration>
-		<failOnMissingWebXml>false</failOnMissingWebXml>
-	</configuration>
-</plugin>
+            
+            		<!-- javaConfig 설정을 하기위한 추가 설정 -->
+            		<!-- web.xml 삭제 -->
+            		<plugin>
+            			<groupId>org.apache.maven.plugins</groupId>
+            			<artifactId>maven-war-plugin</artifactId>
+            			<version>3.2.0</version>
+            			<configuration>
+            				<failOnMissingWebXml>false</failOnMissingWebXml>
+            			</configuration>
+            		</plugin>
+            		
+            
+            
+            
             
         </plugins>
     </build>
