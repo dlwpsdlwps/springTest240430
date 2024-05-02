@@ -16,7 +16,7 @@ public class ServletConfiguration implements WebMvcConfigurer {
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		// TODO Auto-generated method stub
 		// resources 경로설정(+파일업로드 경로설정 추가 예정)
-		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+		registry.addResourceHandler("/re/**").addResourceLocations("/resources/");
 		WebMvcConfigurer.super.addResourceHandlers(registry);
 	}
 

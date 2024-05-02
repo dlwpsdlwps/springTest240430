@@ -1,0 +1,37 @@
+페이지네이션 작성
+댓글라인 다르게 작성
+모달창 작성
+
+부트스트랩 css js 직접 넣기
+
+서블릿config => addResourceHandler => /re/**로 변경
+
+
+댓글 더보기 버튼 (댓글이 5개 이상되어야 나타남)
+댓글 개수 11개
+
+5개 한 화면에 뿌리기
+더보기 버튼 클릭시 +5개 => 10개
+더보기 버튼 클릭 +5개 => 15개
+
+detail.jsp
+#moreBtn 버튼 => data-page="1" 속성 추가
+
+getCommentListFromServer spreadCommentList page매개변수추가
+
+function spreadCommentList(bno, page=1)
+
+if(page==1){
+                ul.innerHTML = '';
+            }
+
+async function getCommentListFromServer(bno, page){
+const resp = await fetch("/comment/"+bno+"/"+page);
+
+컨트롤러 page에 관한 매핑변경, 매개변수 추가 
+
+핸들러에 cvo리스트 만들기, 생성자도 만들기
+
+pvo에 매개변수 2개짜리 생성자 생성
+
+컨트롤러의 list 형을 리스트에서 핸들러로 변경

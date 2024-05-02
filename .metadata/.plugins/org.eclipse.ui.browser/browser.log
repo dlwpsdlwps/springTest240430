@@ -15,3 +15,34 @@
 5월 01, 2024 14:50:00.622 NEW SESSION
 5월 01, 2024 14:50:00.622 Created TensorFlow Lite XNNPACK delegate for CPU.
 5월 01, 2024 14:50:26.193 [8976:6996:0501/145026.193:ERROR:device_event_log_impl.cc(195)] [14:50:26.192] Bluetooth: bluetooth_adapter_winrt.cc:1056 Getting Default Adapter failed.
+
+5월 02, 2024 14:50:57.657 NEW SESSION
+5월 02, 2024 14:50:57.658 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 02, 2024 14:50:59.813 [4228:3024:0502/145059.813:ERROR:CONSOLE(1)] "Request Storage.getStorageKeyForFrame failed. {"code":-32602,"message":"Frame tree node for given frame not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 02, 2024 14:52:01.216 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+5월 02, 2024 14:53:22.108 NEW SESSION
+5월 02, 2024 14:53:22.108 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 02, 2024 15:09:28.449 [12668:9296:0502/150928.449:ERROR:device_event_log_impl.cc(195)] [15:09:28.449] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 02, 2024 15:28:26.913 [12668:9296:0502/152826.913:ERROR:device_event_log_impl.cc(195)] [15:28:26.912] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 02, 2024 15:44:59.989 [12668:9296:0502/154459.989:ERROR:device_event_log_impl.cc(195)] [15:44:59.988] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 02, 2024 15:47:08.243 [12668:9296:0502/154708.243:ERROR:CONSOLE(1)] "Request Storage.getStorageKeyForFrame failed. {"code":-32602,"message":"Frame tree node for given frame not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 02, 2024 15:50:35.591 [12668:9296:0502/155035.591:ERROR:CONSOLE(1)] "Request Storage.getStorageKeyForFrame failed. {"code":-32602,"message":"Frame tree node for given frame not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 02, 2024 15:53:57.452 [12668:1768:0502/155357.452:ERROR:cert_verify_proc_builtin.cc(1052)] CertVerifyProcBuiltin for cdn.jsdelivr.net failed:
+5월 02, 2024 15:53:57.453 ----- Certificate i=0 (CN=ssl363648.cloudflaressl.com) -----
+5월 02, 2024 15:53:57.453 ERROR: Time is after notAfter
+5월 02, 2024 15:53:57.453 
+5월 02, 2024 15:53:57.453 
+5월 02, 2024 15:54:13.953 [12668:9296:0502/155413.953:ERROR:CONSOLE(1)] "Request Storage.getStorageKeyForFrame failed. {"code":-32602,"message":"Frame tree node for given frame not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 02, 2024 15:54:26.322 [12668:9296:0502/155426.321:ERROR:device_event_log_impl.cc(195)] [15:54:26.321] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 02, 2024 16:10:02.26 [12668:9296:0502/161002.026:ERROR:device_event_log_impl.cc(195)] [16:10:02.026] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 02, 2024 16:22:23.268 [12668:9296:0502/162223.268:ERROR:device_event_log_impl.cc(195)] [16:22:23.268] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 02, 2024 16:44:32.887 [12668:9296:0502/164432.887:ERROR:CONSOLE(1)] "Request Storage.getStorageKeyForFrame failed. {"code":-32602,"message":"Frame tree node for given frame not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 02, 2024 16:45:39.102 [12668:9296:0502/164539.102:ERROR:device_event_log_impl.cc(195)] [16:45:39.102] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 02, 2024 17:01:49.338 [12668:9296:0502/170149.338:ERROR:device_event_log_impl.cc(195)] [17:01:49.337] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 02, 2024 17:10:38.965 [12668:9296:0502/171038.965:ERROR:device_event_log_impl.cc(195)] [17:10:38.964] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 02, 2024 17:27:22.784 [12668:9296:0502/172722.784:ERROR:device_event_log_impl.cc(195)] [17:27:22.784] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 02, 2024 17:54:02.808 [12668:9296:0502/175402.808:ERROR:device_event_log_impl.cc(195)] [17:54:02.809] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 02, 2024 18:19:22.399 [12668:9296:0502/181922.399:ERROR:device_event_log_impl.cc(195)] [18:19:22.399] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)
+5월 02, 2024 18:22:50.614 [12668:9296:0502/182250.614:ERROR:CONSOLE(1)] "Request Storage.getStorageKeyForFrame failed. {"code":-32602,"message":"Frame tree node for given frame not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
+5월 02, 2024 18:25:20.180 [12668:9296:0502/182520.180:ERROR:CONSOLE(1)] "Request Storage.getStorageKeyForFrame failed. {"code":-32602,"message":"Frame tree node for given frame not found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)

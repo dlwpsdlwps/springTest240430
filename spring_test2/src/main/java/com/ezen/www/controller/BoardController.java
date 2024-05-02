@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.ezen.www.domain.BoardVO;
+import com.ezen.www.domain.PagingVO;
+import com.ezen.www.handler.PagingHandler;
 import com.ezen.www.service.BoardService;
 
 import lombok.RequiredArgsConstructor;
@@ -32,8 +34,20 @@ public class BoardController {
 	}
 	
 	@GetMapping("/list")
-	public String list(Model m) {
-		List<BoardVO> list = bsv.getList();
+	public String list(Model m, PagingVO pgvo) {
+		log.info("pgvo >> {}", pgvo);
+		
+		//페이징 처리 추가
+		List<BoardVO> list = bsv.getList(pgvo);
+		
+		//totalCount 구해오기
+		int totalCount = bsv.getTotal(pgvo);
+		
+		//PagingHandler 객체 만들어 전송
+		PagingHandler ph = new PagingHandler(pgvo, totalCount);
+		m.addAttribute("ph", ph);
+		
+		//가져온 리스트 => /board/list.jsp로 전달
 		m.addAttribute("list", list);
 		return "/board/list";
 	}
