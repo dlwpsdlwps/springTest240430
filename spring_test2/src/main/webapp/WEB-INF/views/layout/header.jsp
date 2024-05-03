@@ -22,10 +22,10 @@
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/board/register">글쓰기</a>
+          <a class="nav-link" href="/board/register">Register</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/board/list">게시글</a>
+          <a class="nav-link" href="/board/list">List</a>
         </li>
         <%-- <li class="nav-item">
           <a class="nav-link" href="/member/register">회원가입</a>

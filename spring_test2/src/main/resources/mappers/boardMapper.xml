@@ -29,6 +29,10 @@
   		select count(bno) from board where isDel = 'N' <include refid="search"></include>
   	</select>
   	
+  	<select id="selectOneBno" resultType="int">
+  		select max(bno) from board where isDel='N'
+  	</select>
+  	
   	<!-- 검색 라인 -->
   	<sql id="search">
   		<if test="type != null">

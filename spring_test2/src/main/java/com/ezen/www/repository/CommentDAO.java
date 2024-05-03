@@ -15,4 +15,10 @@ public interface CommentDAO {
 
 	int getSelectOneBnoTotalCount(int bno);
 
+	int modify(CommentVO cvo);
+
+	int update(CommentVO cvo);
+
+	int remove(int cno);
+
 }

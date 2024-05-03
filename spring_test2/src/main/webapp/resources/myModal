@@ -1,0 +1,40 @@
+모달창 수정
+
+writer 내 정보이기 때문에 세션에서 가져올 수 있다, 굳이 js에 가져올 필요없음
+nextSibling : 한 부모 안에서 다음 형제를 찾기
+
+js 댓글 출력부 li에 data-cno 달기
+
+responseBody 사용 방식 (수정, 삭제)
+
+---------------------------------
+파일 업로드
+D:\_myProject\_java\_fileUpload
+
+WebConfig => 파일 경로 등록
+location
+maxfilesize => 20mb
+maxrequestsize => 40mb
+filesizethreshold => 20mb
+
+ServletConfig => 화면에서 파일로 접근할 경로 등록
+리소스 경로 설정
+multipartResolver bean 등록
+
+resister.jsp 작성
+enctype="multipart/form=data"
+
+boardRegister.js 작성
+
+FileVO 생성
+BoardController insert 수정
+FileHandler 생성
+
+BoardDTO 생성
+BoardController insert 수정
+BoardServiceImpl insert 수정 - @Transactional
+
+보드맵퍼 수정 selectOne
+
+FileDAO 생성
+fileMapper 생성

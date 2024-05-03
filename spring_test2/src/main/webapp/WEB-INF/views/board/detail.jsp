@@ -1,10 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+	<!-- header -->
     <jsp:include page="../layout/header.jsp" />
+	<!-- body -->
 	<div class="container-md">
-	<h1>detail</h1>
-	<%-- <c:set value="${bdto.bvo }" var="bvo"></c:set> --%>
+		<h1>detail</h1>
+		<%-- <c:set value="${bdto.bvo }" var="bvo"></c:set> --%>
 		<div class="mb-3">
 		  <label for="n" class="form-label">bno</label>
 		  <input type="text" class="form-control" name="bno" id="n" value="${bvo.bno }" placeholder="bno..." readonly="readonly">
@@ -30,7 +32,7 @@
 		  <input type="text" class="form-control" name="read_count" id="rc" value="${bvo.readCount }" readonly="readonly">
 		</div>
 		
-		<%-- <!-- file upload 표시라인 -->
+<%-- 		<!-- file upload 표시라인 -->
 		<c:set value="${bdto.flist }" var="flist"></c:set>
 		<div class="mb-3">
 			<ul class="list-group List-group flush">
@@ -60,8 +62,8 @@
 					</li>			
 				</c:forEach>
 			</ul>
-		</div> --%>
-		
+		</div>
+ --%>		
 		<!-- Comment 라인 -->
 		<!-- 댓글 등록 라인 -->
 		<br>
@@ -101,19 +103,19 @@
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary" id="cmtModeBtn">modify</button>
+		        <button type="button" class="btn btn-primary" id="cmtModBtn">modify</button>
 		      </div>
 		    </div>
 		  </div>
 		</div>
 		
-			<a href="/board/modify?bno=${bvo.bno }"><button type="button" class="btn btn-warning">수정</button></a>
-			<a href="/board/delete?bno=${bvo.bno }"><button type="button" class="btn btn-danger">삭제</button></a>
-		
+		<!-- 하단부 버튼 -->
+		<a href="/board/modify?bno=${bvo.bno }"><button type="button" class="btn btn-warning">수정</button></a>
+		<a href="/board/delete?bno=${bvo.bno }"><button type="button" class="btn btn-danger">삭제</button></a>
 		<a href="/board/list"><button type="button" class="btn btn-primary">목록</button></a>
 	</div>
 	
-	
+	<!-- 스크립트부 -->
 	<script type="text/javascript">
 		const bnoVal = `<c:out value="${bvo.bno}" />`;
 		/* const id = `<c:out value="${ses.id}" />`; */
@@ -125,5 +127,5 @@
 	<script type="text/javascript">
 		spreadCommentList(bnoVal);
 	</script>
-
+	<!-- footer -->
 	<jsp:include page="../layout/footer.jsp" />

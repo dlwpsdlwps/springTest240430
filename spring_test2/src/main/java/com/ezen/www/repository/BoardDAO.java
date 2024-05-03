@@ -7,7 +7,7 @@ import com.ezen.www.domain.PagingVO;
 
 public interface BoardDAO {
 
-	void insert(BoardVO bvo);
+	int insert(BoardVO bvo);
 
 	List<BoardVO> getList(PagingVO pgvo);
 
@@ -18,5 +18,7 @@ public interface BoardDAO {
 	void delete(int bno);
 
 	int getTotal(PagingVO pgvo);
+
+	int selectOneBno();
 
 }

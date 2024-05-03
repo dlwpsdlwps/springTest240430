@@ -35,3 +35,5 @@ const resp = await fetch("/comment/"+bno+"/"+page);
 pvo에 매개변수 2개짜리 생성자 생성
 
 컨트롤러의 list 형을 리스트에서 핸들러로 변경
+
+js code 작성

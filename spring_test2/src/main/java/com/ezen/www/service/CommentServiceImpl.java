@@ -26,11 +26,29 @@ public class CommentServiceImpl implements CommentService {
 
 	@Override
 	public PagingHandler getList(int bno, PagingVO pgvo) {
-		// cmtList ph객체 안에 삽입
+		/* cmtList ph객체 안에 삽입 */
 		List<CommentVO> list = cdao.getList(bno, pgvo);
-		//totlaCount 구해오기
+		/* totlaCount 구해오기 */
 		int totalCount = cdao.getSelectOneBnoTotalCount(bno);
 		PagingHandler ph = new PagingHandler(pgvo, totalCount, list); 
 		return ph;
+	}
+
+	@Override
+	public int modify(CommentVO cvo) {
+		// TODO Auto-generated method stub
+		return cdao.modify(cvo);
+	}
+
+	@Override
+	public int edit(CommentVO cvo) {
+		// TODO Auto-generated method stub
+		return cdao.update(cvo);
+	}
+
+	@Override
+	public int remove(int cno) {
+		// TODO Auto-generated method stub
+		return cdao.remove(cno);
 	}
 }
