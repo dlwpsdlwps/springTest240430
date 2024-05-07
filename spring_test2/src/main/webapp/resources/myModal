@@ -38,3 +38,46 @@ BoardServiceImpl insert 수정 - @Transactional
 
 FileDAO 생성
 fileMapper 생성
+
+--0507
+BoardController - detail() - BoardDTO로 수정
+
+BoardServiceImpl - getDetail() - bvo, flist, 묶어서 DTO return
+
+detail.jsp - <c:set value="${bdto.bvo }" var="bvo"></c:set>
+업로드 경로 - /upload/ => /up/로 변경 (ServletConfiguration 설정때문에)
+
+detail.jsp - 이미지 파일이 아닌 경우 다운로드
+
+modify 수정
+
+redirectAttribute?
+
+scheduler
+pom - quartz-2.3.2 의존성 추가
+
+핸들러 - FileSweeper 생성
+
+-------------------------------------------
+
+--user table
+create table user(
+email varchar(100) not null,
+pwd varchar(256) not null,
+nick_name varchar(100) not null,
+reg_date datetime default now(),
+last_login datetime default null,
+primary key(email));
+
+--auth table
+create table auth_user(
+email varchar(100) not null,
+auth varchar(50) not null);
+
+alter table auth_user add constraint fk_auth foreign key(email) references user(email);
+
+UserVO, AuthVO 생성
+
+pom.xml - security taglib 의존성 추가
+
+SecurityConfig 생성 - SecurityInitializer - LoginSuccessHandler - LoginFailureHandler - CustomAuthUserService

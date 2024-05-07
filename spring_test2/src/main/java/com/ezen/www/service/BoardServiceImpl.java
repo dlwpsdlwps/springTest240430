@@ -49,15 +49,29 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public BoardVO getDetail(int bno) {
-		// TODO Auto-generated method stub
-		return bdao.getDetail(bno);
+	public BoardDTO getDetail(int bno) {
+		// bvo, flist, 묶어서 DTO return
+		BoardVO bvo = bdao.getDetail(bno);
+		List<FileVO> flist = fdao.getList(bno);
+		BoardDTO bdto = new BoardDTO(bvo, flist);
+		return bdto;
 	}
-
+	
+	@Transactional
 	@Override
-	public void update(BoardVO bvo) {
+	public void update(BoardDTO bdto) {
 		// TODO Auto-generated method stub
-		bdao.update(bvo);
+		int isOk = bdao.update(bdto.getBvo());
+		if(bdto.getFlist()==null) {
+			return;
+		}
+		
+		if(isOk>0 && bdto.getFlist().size()>0) {
+			for(FileVO fvo : bdto.getFlist()) {
+				fvo.setBno(bdto.getBvo().getBno());
+				isOk *= fdao.insertFile(fvo);
+			}
+		}
 	}
 
 	@Override
@@ -70,5 +84,11 @@ public class BoardServiceImpl implements BoardService {
 	public int getTotal(PagingVO pgvo) {
 		// TODO Auto-generated method stub
 		return bdao.getTotal(pgvo);
+	}
+
+	@Override
+	public int deleteFile(String uuid) {
+		// TODO Auto-generated method stub
+		return fdao.deleteFile(uuid);
 	}
 }
