@@ -81,3 +81,66 @@ UserVO, AuthVO 생성
 pom.xml - security taglib 의존성 추가
 
 SecurityConfig 생성 - SecurityInitializer - LoginSuccessHandler - LoginFailureHandler - CustomAuthUserService
+
+05/08
+
+1.유저컨트롤러 register()에 권한 추가
+	권한 줄때는 대문자 표기
+	ROLE_USER
+	ROLE_ADMIN
+
+2.CustomAuthUserService
+	serviceImpl이랑 비슷함
+	기본라인 아니면 inject나 autowired -> UserDAO연결하기
+
+	loadUserByUsername()
+		// username : 로그인을 시도한 email
+		// UserDetails : 인증용 객체
+		// username이 DB에 있는지 확인하여 인증용 객체를 리턴
+
+3.AuthUser
+	extends User(springframework)
+	생성자 2번째
+
+	Collection으로 형변환하기 위해
+		public AuthUser(UserVO uvo) {
+			super(uvo.getEmail(), uvo.getPwd(), 
+					uvo.getAuthList().stream()
+					.map(authVO ->
+					new SimpleGrantedAuthority(authVO.getAuth()))
+					.collect(Collectors.toList()));
+			this.uvo = uvo;
+		}
+
+4.LoginFailureHandler
+	setAuthEmail()
+	//exception 발생시 메세지 저장 -> 다양하게 exception 추가 가능
+	
+5.UserController
+	login()
+	loginPost()
+
+6.login.jsp
+	not empty (같음) != ''
+	errMsg 값 확인해보기
+
+7.LoginSuccessHandler
+
+	//redirect 데이터를 가지고 리다이렉트 하는 역할
+	redStg
+	//로그인 정보, 경로
+	reqCache
+
+	//로그인 일자 기록 lastLogin
+	UserService 연결
+
+	멤버변수 단일로 getter setter 생성 가능
+
+8.header.jsp
+	- <%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %> 추가
+		taglib는 페이지마다 있어야함
+
+9.register.jsp - writer에 닉네임 표시
+  detail.jsp - 댓글에 닉네임
+
+10.회원리스트 생성

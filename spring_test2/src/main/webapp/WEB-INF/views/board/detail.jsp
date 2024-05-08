@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec"%>
+<sec:authentication property="principal.uvo.nickName" var="authNick" />
 	<!-- header -->
     <jsp:include page="../layout/header.jsp" />
 	<!-- body -->
@@ -75,7 +77,7 @@
 		<br>
 		<hr>
 		<div class="input-group mb-3">
-			<span class="input-group-text" id="cmtWriter">${ses.id }</span>
+			<span class="input-group-text" id="cmtWriter">${authNick }</span>
 			<input type="text" id="cmtText" class="form-control" placeholder="Add Comment..." aria-label="Username" aria-describedby="basic-addon1">
 			<button type="button" id="cmtAddBtn" class="btn btn-secondary">Post</button>
 		</div>
