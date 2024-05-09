@@ -21,4 +21,10 @@ public interface UserDAO {
 
 	void modify(UserVO uvo);
 
+	void modifyWithoutPwd(UserVO uvo);
+
+	void delete(String email);
+
+	void deleteAuth(String email);
+
 }

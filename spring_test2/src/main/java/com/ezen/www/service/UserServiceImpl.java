@@ -38,5 +38,15 @@ public class UserServiceImpl implements UserService{
 	public void modify(UserVO uvo) {
 		udao.modify(uvo);
 	}
-	
+
+	@Override
+	public void modifyWithoutPwd(UserVO uvo) {
+		udao.modifyWithoutPwd(uvo);
+	}
+
+	@Override
+	public void delete(String email) {
+		udao.deleteAuth(email);
+		udao.delete(email);
+	}
 }

@@ -17,8 +17,12 @@
   		select * from board where bno=#{bno}
   	</select>
   	
+  	<update id="updateReadCount">
+  		update board set read_count = read_count + 1 where bno = #{bno}
+  	</update>
+  	
   	<update id="update">
-  		update board set title=#{title}, content=#{content} where bno=#{bno}
+  		update board set title=#{title}, content=#{content}, read_count = read_count -2 where bno=#{bno}
   	</update>
   	
   	<update id="delete">

@@ -16,7 +16,7 @@
 		</div>
 		<div class="mb-3">
 			<label for="p" class="form-label">password</label>
-			<input type="text" class="form-control" name="pwd" id="p" value="${pwd }" placeholder="password...">
+			<input type="text" class="form-control" name="pwd" id="p" placeholder="password...">
 		</div>
 		<div class="mb-3">
 			<label for="n" class="form-label">nick_name</label>
@@ -35,8 +35,20 @@
 			<input type="text" class="form-control" name="auth" value="${auth }" placeholder="lastLogin..." readonly="readonly">
 		</div> --%>
 		<button type="submit" class="btn btn-primary">적용</button>
-		<a href="/user/delete"><button type="button" class="btn btn-danger">삭제</button></a>
+		<!-- <a href="/user/delete"><button type="button" class="btn btn-danger">삭제</button></a> -->
+		<button type="button" id="delBtn" class="btn btn-danger">삭제</button>
 		<a href="/user/list"><button type="button" class="btn btn-primary">목록</button></a>
 	</form>
 </div>
+
+<script type="text/javascript">
+	document.getElementById('delBtn').addEventListener('click',()=>{
+	    let check = confirm("정말 탈퇴?");
+	    console.log(check);
+	    if(check) {
+	        location.href="/user/delete";
+	    }
+	});
+</script>
+
 <jsp:include page="../layout/footer.jsp" />

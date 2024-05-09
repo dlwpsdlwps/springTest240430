@@ -30,7 +30,19 @@
 		</select>
 		
 		<update id="modify">
-			update user set pwd = #{pwd}, nick_name = #{nickName}
+			update user set pwd = #{pwd}, nick_name = #{nickName} where email = #{email}
 		</update>
+		
+		<update id="modifyWithoutPwd">
+			update user set nick_name = #{nickName} where email = #{email}
+		</update>
+		
+		<delete id="delete">
+			delete from user where email = #{email}
+		</delete>
+		
+		<delete id="deleteAuth">
+			delete from auth_user where email = #{email}
+		</delete>
 		
 	</mapper>

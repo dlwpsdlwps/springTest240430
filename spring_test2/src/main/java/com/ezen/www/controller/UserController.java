@@ -1,10 +1,15 @@
 package com.ezen.www.controller;
 
+import java.security.Principal;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -65,9 +70,29 @@ public class UserController {
 	public void modify() {}
 	
 	@PostMapping("/modify")
-	public String modify(UserVO uvo) {
-		usv.modify(uvo);
-		return "redirect:/user/logout";
+	public String modify(UserVO uvo, HttpServletRequest request, HttpServletResponse response) {
+		if(uvo.getPwd() == null || uvo.getPwd().length() < 0 || uvo.getPwd().equals("")) {
+			usv.modifyWithoutPwd(uvo);
+		}else {
+			uvo.setPwd(bcEncoder.encode(uvo.getPwd()));
+			usv.modify(uvo);
+		}
+		logout(request, response);
+		return "redirect:/";
 	}
 	
+	@GetMapping("/delete")
+	public String delete(Principal principal, HttpServletRequest request, HttpServletResponse response) {
+		usv.delete(principal.getName());
+		logout(request, response);
+		return "redirect:/";
+	}
+	
+	private void logout(HttpServletRequest request, HttpServletResponse response) {
+		Authentication authentication = 
+				SecurityContextHolder
+				.getContext()
+				.getAuthentication();
+		new SecurityContextLogoutHandler().logout(request, response, authentication);
+	}
 }
