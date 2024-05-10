@@ -144,3 +144,14 @@ SecurityConfig 생성 - SecurityInitializer - LoginSuccessHandler - LoginFailure
   detail.jsp - 댓글에 닉네임
 
 10.회원리스트 생성
+
+11.회원수정
+
+12.회원삭제
+
+13.로그아웃 컨트롤러에 추가
+	Athentication 객체 - SecurityContextHolder - getContext - getAuthentication
+	
+
+
+	
